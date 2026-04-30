@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Προσθήκη Ομάδας</title>
+
+<link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Volleyball League</h1>
+</header>
+
+<nav>
+    <ul class="nav-menu">
+        <li><a href="index.html">Αρχική</a></li>
+        <li><a href="clubs.html">Ομάδες</a></li>
+        <li><a href="matches.html">Αγώνες</a></li>
+        <li><a href="table.html">Βαθμολογία</a></li>
+        <li><a href="add_club.html">Νέα Ομάδα</a></li>
+        <li><a href="sign-up.html">Εγγραφή</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<h2>Προσθήκη Νέας Ομάδας</h2>
+
+<p class="form-note">
+Προσοχή! Τα πεδία με * είναι υποχρεωτικό να συμπληρωθούν!
+</p>
+
+<form class="club-form">
+
+    <!-- Όνομα -->
+    <label>Όνομα Ομάδας*</label>
+    <input type="text" required>
+
+    <!-- Logo -->
+    <label>Λογότυπο*</label>
+    <input type="file" required>
+
+    <!-- Φωτογραφία -->
+    <label>Φωτογραφία Ομάδας*</label>
+    <input type="file" required>
+
+    <h3>Προσθήκη Παικτών*</h3>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Ονοματεπώνυμο</th>
+            <th>Θέση</th>
+            <th>Ύψος</th>
+            <th>Ημ. Γέννησης</th>
+        </tr>
+
+        <!-- Παίκτης 1 Endeiktika-->
+        <tr>
+            <td><input type="number" min="0" max="99" required></td>
+            <td><input type="text" required></td>
+            <td>
+                <select required>
+                    <option>Πασαδόρος</option>
+                    <option>Λίμπερο</option>
+                    <option>Ακραίος</option>
+                    <option>Κεντρικός</option>
+                    <option>Διαγώνιος</option>
+                </select>
+            </td>
+            <td><input type="number" step="0.01" required></td>
+            <td><input type="date" required></td>
+        </tr>
+    </table>
+
+    <p class="form-note">
+    Προσοχή! Είναι απαραίτητο να προστεθούν συνολικά 12 παίκτες και όχι λιγότεροι!.
+    </p>
+
+    <!-- STAFF -->
+    <h3>Staff</h3>
+
+    <label>Προπονητής*</label>
+    <input type="text" required>
+
+    <label>Γυμναστής</label>
+    <input type="text">
+
+    <label>Φυσικοθεραπευτής</label>
+    <input type="text">
+
+    <label>Έφορος</label>
+    <input type="text">
+
+    <label>Στατιστικολόγος</label>
+    <input type="text">
+
+    <!-- VIDEO -->
+    <h3>Video (YouTube link)*</h3>
+    <input type="url" placeholder="https://youtube.com/..." required>
+
+    <!-- WEBSITE -->
+    <label>Site Ομάδας*</label>
+    <input type="url" required>
+
+    <button type="submit">Καταχώρηση Ομάδας</button>
+
+</form>
+
+<!-- SPONSORS -->
+<section class="sponsors">
+
+<h2 class="sponsors-title">ΜΕΓΑΛΟΣ ΧΟΡΗΓΟΣ</h2>
+
+<div class="main-sponsor">
+    <a href="https://www.stoiximan.gr" target="_blank">
+        <img src="media/sponsor/stoiximan.png" alt="Stoiximan" class="sponsor-logo">
+    </a>
+</div>
+
+<h3 class="sponsors-title">ΕΠΙΣΗΜΟΙ ΧΟΡΗΓΟΙ</h3>
+
+<div class="sponsor-row">
+
+    <a href="https://www.ert.gr" target="_blank">
+        <img src="media/sponsor/ERT.png" class="sponsor-logo">
+    </a>
+
+    <a href="https://www.cosmote.gr" target="_blank">
+        <img src="media/sponsor/Cosmote.png" class="sponsor-logo">
+    </a>
+
+    <a href="https://www.nbg.gr" target="_blank">
+        <img src="media/sponsor/NBG.png" class="sponsor-logo">
+    </a>
+
+    <a href="https://www.instacar.gr" target="_blank">
+        <img src="media/sponsor/instacar.png" class="sponsor-logo">
+    </a>
+
+</div>
+
+<h3 class="sponsors-title">ΕΠΙΣΗΜΗ ΜΠΑΛΑ</h3>
+
+<div class="ball-sponsor">
+    <a href="https://www.spalding.com" target="_blank">
+        <img src="media/sponsor/Spalding.png" class="sponsor-logo">
+    </a>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Volleyball League</p>
+</footer>
+
+</body>
+</html>

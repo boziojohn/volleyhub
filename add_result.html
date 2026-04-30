@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VolleyHub - Add Result</title>
+
+<link rel="stylesheet" href="styles/style.css">
+
+<style>
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.set {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.set input {
+    width: 90px;
+    padding: 8px;
+    text-align: center;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>VolleyHub</h1>
+<h2>Προσθήκη Αποτελέσματος</h2>
+</header>
+
+<nav>
+<ul class="nav-menu">
+<li><a href="index.html">Αρχική</a></li>
+<li><a href="clubs.html">Ομάδες</a></li>
+<li><a href="matches.html">Αγώνες</a></li>
+<li><a href="table.html">Βαθμολογία</a></li>
+</ul>
+</nav>
+
+<main>
+
+<div class="container">
+
+<h3>Συμπλήρωσε τα σετ του αγώνα</h3>
+
+<!-- SETS -->
+<p>Σετ 1</p>
+<div class="set">
+<input type="number" id="h1" placeholder="Home">
+<input type="number" id="a1" placeholder="Away">
+</div>
+
+<p>Σετ 2</p>
+<div class="set">
+<input type="number" id="h2">
+<input type="number" id="a2">
+</div>
+
+<p>Σετ 3</p>
+<div class="set">
+<input type="number" id="h3">
+<input type="number" id="a3">
+</div>
+
+<p>Σετ 4</p>
+<div class="set">
+<input type="number" id="h4">
+<input type="number" id="a4">
+</div>
+
+<p>Σετ 5 (Tie-break)</p>
+<div class="set">
+<input type="number" id="h5">
+<input type="number" id="a5">
+</div>
+
+<br>
+
+<!-- FILE UPLOAD -->
+<label><strong>Φύλλο Αγώνα:</strong></label><br>
+<input type="file" accept=".pdf,.jpg,.png">
+
+<br><br>
+
+<button onclick="validateMatch()">Υποβολή</button>
+
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 VolleyHub</p>
+</footer>
+
+<!-- ================= JS VALIDATION ================= -->
+<script>
+
+function validateSet(h, a, isTie){
+
+if(h === "" || a === "") return true;
+
+h = parseInt(h);
+a = parseInt(a);
+
+let target = isTie ? 15 : 25;
+
+// prepei na ftasei to orio
+if(h < target && a < target){
+alert("Το σετ δεν έχει ολοκληρωθεί (όριο πόντων)");
+return false;
+}
+
+// 2 pontoi diafora
+if(Math.abs(h - a) < 2){
+alert("Πρέπει να υπάρχει διαφορά 2 πόντων");
+return false;
+}
+
+return true;
+}
+
+function validateMatch(){
+
+let homeSets = 0;
+let awaySets = 0;
+
+for(let i=1;i<=5;i++){
+
+let h = document.getElementById("h"+i).value;
+let a = document.getElementById("a"+i).value;
+
+if(h !== "" && a !== ""){
+
+let isTie = (i === 5);
+
+if(!validateSet(h,a,isTie)){
+return;
+}
+
+if(parseInt(h) > parseInt(a)) homeSets++;
+else awaySets++;
+
+if(homeSets === 3 || awaySets === 3) break;
+}
+}
+
+if(homeSets < 3 && awaySets < 3){
+alert("Ο αγώνας δεν έχει ολοκληρωθεί (χρειάζονται 3 σετ)");
+return;
+}
+
+alert("Το αποτέλεσμα είναι έγκυρο και καταχωρήθηκε!");
+}
+
+</script>
+
+</body>
+</html>

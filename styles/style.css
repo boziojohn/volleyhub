@@ -1,0 +1,707 @@
+/* Epanafora */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Plohghsh */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: #1b263b;
+    flex-wrap: wrap;
+}
+
+.nav-menu li {
+    margin: 10px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.nav-menu a:hover {
+    background: #415a77;
+    transform: scale(1.05);
+}
+
+/* Kentriko */
+main {
+    padding: 20px;
+}
+
+/* Tmhmata */
+section {
+    background: white;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    transition: 0.3s ease;
+}
+
+/* HOVER  */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Eikones */
+.home-img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+/* HOVER Eikona */
+.home-img:hover {
+    transform: scale(1.03);
+}
+
+/* Pinakas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background: #1b263b;
+    color: white;
+}
+
+/* Logotypo */
+.logo {
+    width: 100px;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+/* Logotypo HOVER */
+.logo:hover {
+    transform: rotate(-3deg) scale(1.05);
+}
+
+/* FOOTER  */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0d1b2a;
+    color: white;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE  */
+@media (max-width: 900px) {
+    section {
+        margin: 20px 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Karta mats */
+.match {
+    background: white;
+    margin: 25px auto;
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+/* hover effect */
+.match:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* TEAMS LAYOUT */
+.teams {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.team {
+    text-align: center;
+}
+
+.team img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.team img:hover {
+    transform: scale(1.1);
+}
+
+.vs {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Skor */
+.score {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Koumpi add result */
+.add-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background: #1b263b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #415a77;
+    transform: scale(1.05);
+}
+
+/* Kentrarisma mats */
+
+.match {
+    text-align: center;
+}
+
+/* teams centered */
+.teams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.team {
+    text-align: center;
+}
+
+/* logos */
+.team img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+/* vs text */
+.vs {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* SCORE BOX */
+.score {
+    margin-top: 10px;
+    font-weight: bold;
+    background: #f1f5f9;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+/* Set Analysh */
+.sets {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #444;
+}
+
+.round-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 30px 0 15px 0;
+}
+
+.info-section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.info-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px; /*  megalitero keno anamesa se cards */
+}
+
+.info-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+}
+
+.info-card h3 {
+    margin-bottom: 15px; /*  keno katv apo titlo */
+}
+
+.info-card p,
+.info-card ul {
+    line-height: 1.6; /* keno upsos */
+}
+
+.info-card ul {
+    padding-left: 18px;
+}
+
+.club-logo {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.team-photo {
+    width: 100%;
+    max-width: 500px;   
+    height: 300px;      /* idio upsos gia ola */
+    object-fit: cover;  
+    
+    display: block;
+    margin: 20px auto;  /* kentrarismenh */
+    
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.team-photo {
+    transition: transform 0.3s ease;
+}
+
+.team-photo:hover {
+    transform: scale(1.03);
+}
+
+/* CLUB SECTIONS */
+
+.club {
+    margin-bottom: 50px;        /* keno metaksi omadvn */
+    padding: 25px;
+
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/*  Titloi (Roster, Staff, Media) */
+.club h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Pinakas roster */
+.club table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.club table th,
+.club table td {
+    padding: 8px;
+    text-align: center;
+}
+
+/* staff */
+.club p {
+    margin-bottom: 10px;
+}
+
+/* Video */
+.club iframe {
+    margin: 15px 0;
+    display: block;
+}
+
+/* ========================= TEAM PHOTO ========================= */
+
+.team-photo {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+
+    display: block;
+    margin: 20px auto;
+
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+    transition: transform 0.3s ease;
+}
+
+.team-photo:hover {
+    transform: scale(1.03);
+}
+
+/* ========================= LOGO ========================= */
+
+.sponsors {
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+    color: #222;
+}
+
+.sponsors-title,
+.sponsor-subtitle {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 40px 0 20px 0;
+    text-transform: uppercase;
+}
+
+/* Megalos Xorhgos */
+.main-sponsor img {
+    width: 220px;
+    transition: 0.3s;
+}
+
+.main-sponsor img:hover {
+    transform: scale(1.05);
+}
+
+/* 4 Xorhgoi */
+.sponsor-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;   
+    margin: 20px 0;
+}
+
+.sponsor-row img {
+    width: 120px;
+    transition: 0.3s;
+}
+
+.sponsor-row img:hover {
+    transform: scale(1.1);
+}
+
+/* Mpala */
+.ball-sponsor img {
+    width: 160px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.ball-sponsor img:hover {
+    transform: scale(1.05);
+}
+
+.main-sponsor {
+    margin: 20px 0 40px 0; /* panv katv keno */
+}
+
+.sponsor-subtitle {
+    margin: 40px 0 20px 0; 
+}
+
+.ball-sponsor {
+    margin: 30px 0 10px 0;
+}
+
+.main-sponsor,
+.ball-sponsor {
+    display: flex;
+    justify-content: center;
+}
+
+.club video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+/* FORM DESIGN */
+
+.club-form {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* kathe pedio se nea grammh */
+.club-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+/* inputs full width */
+.club-form input,
+.club-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+/* sections */
+.club-form h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* button */
+.club-form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #1b263b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.club-form button:hover {
+    background: #415a77;
+}
+
+
+main h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.form-note {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+    background: #f1f5f9;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+/* =========================
+   3-TIER RESPONSIVE DESIGN
+   Desktop / Tablet / Mobile
+========================= */
+
+/* =========================
+   🖥️ DESKTOP (default > 1024px)
+========================= */
+
+
+/* =========================
+   📱 TABLET (768px - 1024px)
+========================= */
+@media (max-width: 1024px) {
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .teams {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .team img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sponsor-row {
+        gap: 30px;
+    }
+
+    .sponsor-row img {
+        width: 100px;
+    }
+
+    .main-sponsor img {
+        width: 180px;
+    }
+
+    .ball-sponsor img {
+        width: 140px;
+    }
+
+    .club-form {
+        width: 90%;
+    }
+}
+
+
+/* =========================
+   📱 MOBILE (≤ 768px)
+========================= */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin: 6px 0;
+    }
+
+    section {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .teams {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .vs {
+        font-size: 16px;
+    }
+
+    .team img {
+        width: 55px;
+        height: 55px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    .sponsor-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sponsor-row img {
+        width: 110px;
+    }
+
+    .main-sponsor img {
+        width: 160px;
+    }
+
+    .ball-sponsor img {
+        width: 130px;
+    }
+
+    .club-form {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .club-form input,
+    .club-form select {
+        font-size: 14px;
+    }
+
+    .add-btn {
+        width: 90%;
+    }
+}
+
+/* CLUB LOGO CENTER FIX */
+
+.club {
+    text-align: center; /* kentrarisma */
+}
+
+/* logo eikones
+ */
+.club img {
+    display: block;
+    margin: 10px auto;
+}
+
+.club-logo {
+    display: block;
+    margin: 15px auto;
+}
