@@ -1,6 +1,3 @@
-# volleyhub
-A responsive 3-tier web application for managing volleyball teams, matches and league information.
-
 # 🏐 VolleyHub
 
 VolleyHub is a modern web application focused on volleyball leagues.
